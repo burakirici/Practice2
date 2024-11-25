@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kayıt Formu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input, select, textarea, button {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="radio"] {
+            width: auto;
+            margin-right: 5px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Kayıt Formu</h2>
+    <form action="/submit" method="post">
+        <!-- Ad ve Soyad -->
+        <label for="name">Ad:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="surname">Soyad:</label>
+        <input type="text" id="surname" name="surname" required>
+
+        <!-- E-posta -->
+        <label for="email">E-posta:</label>
+        <input type="email" id="email" name="email" required>
+
+        <!-- Parola -->
+        <label for="password">Parola:</label>
+        <input type="password" id="password" name="password" required>
+
+        <!-- Cinsiyet -->
+        <label>Cinsiyet:</label>
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label for="male" style="display: inline;">Erkek</label>
+
+        <input type="radio" id="female" name="gender" value="female" required>
+        <label for="female" style="display: inline;">Kadın</label>
+
+        <!-- Favori Meyve -->
+        <label for="fruit">Favori Meyve:</label>
+        <select id="fruit" name="fruit" required>
+            <option value="apple">Elma</option>
+            <option value="banana">Muz</option>
+            <option value="strawberry">Çilek</option>
+        </select>
+
+        <!-- Mesaj -->
+        <label for="message">Mesaj:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <!-- Gönder Düğmesi -->
+        <button type="submit">Gönder</button>
+    </form>
+
+</body>
+</html>
